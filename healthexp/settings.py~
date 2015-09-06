@@ -1,0 +1,24 @@
+# -*- coding: utf-8 -*-
+
+# Scrapy settings for healthexp project
+#
+# For simplicity, this file contains only the most important settings by
+# default. All the other settings are documented here:
+#
+#     http://doc.scrapy.org/en/latest/topics/settings.html
+#
+
+BOT_NAME = 'healthexp'
+
+SPIDER_MODULES = ['healthexp.spiders']
+NEWSPIDER_MODULE = 'healthexp.spiders'
+
+ITEM_PIPELINES = ['healthexp.pipelines.HealthexpPipeline',]
+
+MONGODB_SERVER = "localhost"
+MONGODB_PORT = 27017
+MONGODB_DB = "health-database"
+MONGODB_COLLECTION = "articles"
+
+# Crawl responsibly by identifying yourself (and your website) on the user-agent
+#USER_AGENT = 'healthexp (+http://www.yourdomain.com)'
